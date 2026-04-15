@@ -2,9 +2,9 @@
   <v-form v-model="isValid" ref="formRef">
     <v-container>
       <slot>
-          <div>hello window1</div>
+        <div>hello window 3</div>
         <div>hello window</div>
-          <div>hello window2</div>
+        <div>hello window 4</div>
       </slot>
     </v-container>
   </v-form>
