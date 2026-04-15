@@ -1,18 +1,20 @@
 <template>
   <v-form v-model="isValid" ref="formRef">
     <v-container>
-      <slot></slot>
+      <slot>
+        <div>hello window</div>
+      </slot>
     </v-container>
   </v-form>
 </template>
 <script setup lang="ts">
-import { ref, defineComponent } from "vue";
+import { ref } from "vue";
 const isValid = ref(false);
 const formRef = ref<any>(null);
 
 // Form reset logic
 const resetForm = () => {
-    formRef.value.reset(); // Reset form fields and validation state
+  formRef.value.reset(); // Reset form fields and validation state
 };
 
 function validate() {
@@ -27,6 +29,4 @@ defineExpose({
 });
 </script>
 
-<style scoped>
-/* Custom styles for the form if necessary */
-</style>
+<style scoped></style>
